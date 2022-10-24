@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  abp_host:
+    image: docker.io/abp/host
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Staging"
+      ConnectionStrings__Default: "Server=192.168.22.101;Database=dbBooks;User Id=sa;Password=D8JeW7jjSmBVXLcRxWLDwMjYLnf6xVG8;"
+      App__CorsOrigins: "http://localhost:4200"
+      TZ: "America/Toronto"
+    ports:
+      - "44311:80"
+    volumes:
+      - "./Host-Logs:/app/App_Data/Logs"
+    restart: always
+
+  abp_ng:
+    image: docker.io/abp/ng
+    ports:
+      - "4200:80"
+
