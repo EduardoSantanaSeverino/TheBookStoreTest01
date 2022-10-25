@@ -3,7 +3,7 @@ version: '3'
 services:
 
   abp_host:
-    image: docker.io/abp/host
+    image: abp/host
     environment:
       ASPNETCORE_ENVIRONMENT: "Staging"
       ConnectionStrings__Default: "Server=192.168.22.101;Database=dbBooks;User Id=sa;Password=D8JeW7jjSmBVXLcRxWLDwMjYLnf6xVG8;"
@@ -19,7 +19,6 @@ services:
     restart: always
 
   abp_ng:
-    image: docker.io/abp/ng
+    image: abp/ng
     ports:
       - "4200:80"
-

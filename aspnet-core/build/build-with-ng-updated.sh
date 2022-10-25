@@ -6,8 +6,8 @@ echo ""
 # shopt -s expand_aliases
 # source ~/.bashrc
 
-ABP_HOST="docker.io/abp/host"
-ABP_NG="docker.io/abp/ng"
+ABP_HOST="abp/host"
+ABP_NG="abp/ng"
 
 cd ..
 echo " Building docker image $ABP_HOST..."
