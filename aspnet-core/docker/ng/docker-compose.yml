@@ -7,8 +7,11 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: "Staging"
       ConnectionStrings__Default: "Server=192.168.22.101;Database=dbBooks;User Id=sa;Password=D8JeW7jjSmBVXLcRxWLDwMjYLnf6xVG8;"
+      App__ServerRootAddress: "http://localhost:44311/"
+      App__ClientRootAddress: "http://localhost:4200/"
       App__CorsOrigins: "http://localhost:4200"
       TZ: "America/Toronto"
+      Kestrel__Endpoints__Http__Url: "http://+:80"
     ports:
       - "44311:80"
     volumes:

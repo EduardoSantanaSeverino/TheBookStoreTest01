@@ -3,8 +3,8 @@ echo " Welcome to docker build"
 echo ""
 echo ""
 
-shopt -s expand_aliases
-source ~/.bashrc
+# shopt -s expand_aliases
+# source ~/.bashrc
 
 ABP_HOST="docker.io/abp/host"
 ABP_NG="docker.io/abp/ng"
